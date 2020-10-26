@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        println("first commit message")
         for (i in 1..100){
               if ( i % 3 == 0 && i % 5 == 0){
                 Log.d("FizzBuzz", "FizzBuzz")
