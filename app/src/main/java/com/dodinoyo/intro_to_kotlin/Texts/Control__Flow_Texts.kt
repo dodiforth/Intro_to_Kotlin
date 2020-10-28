@@ -69,5 +69,20 @@ You should print this whenever you encounter a number that is prime
 (divisible only by itself and one).
 As you implement this, don't worry about the efficiency of the algorithm you sue to check for primes.
 It's okay for it to be slow.
+
+
+for (i in 1..100){
+              if ( i % 3 == 0 && i % 5 == 0){
+                Log.d("FizzBuzz", "FizzBuzz")
+            } else if ( i % 3 == 0){
+                Log.d("Fizz", "Fizz")
+            } else if (i % 5 == 0) {
+                Log.d("Buzz", "Buzz")
+            } else{
+                Log.d("StringNumber", i.toString())
+            }
+        }
+
+
  */
 
