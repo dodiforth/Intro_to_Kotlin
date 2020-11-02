@@ -5,30 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    var playerPosition: Int = 5 // this is global variable.
-    val maxPositions: Int = 10
-    val minPosition: Int = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Function intro
-        //Functions in Class is called Method
+        val t_shirt = Clothing("t-shirt",6)
+        val isClean = t_shirt.isClelean
+        t_shirt.washClothing()
 
-        val isValidmove = move( 5 )
 
-
-    }
-
-    fun move(byAmount: Int) : Boolean{
-        //var playerPosition: Int = 5 // this is called local variable,it only exist within the cope of particular function
-        if(playerPosition + byAmount > maxPositions || playerPosition + byAmount < minPosition  ) {
-            return false
-        } else {
-            playerPosition += byAmount
-            return true
-        }
+        val sneakers: ShoesWithLaces = ShoesWithLaces("sneakers", 10)
+        sneakers.lacedShoes("checkered laces")
+        sneakers.washClothing()
     }
 }
 
