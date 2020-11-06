@@ -1,32 +1,53 @@
 fun main(args: Array<String>) {
-    println("Hello World")
-    println("My first Kotlin program")
+    val tim = Player("Tim")
+//    println(tim.name)
+//    println(tim.lives)
+//    println(tim.level)
+//    println(tim.score)
+    tim.show()
 
-    val tim = "Tim Buchalka"
-    println(tim)
+    val louise = Player("Louise", 5)
+    louise.show()
 
-    val timsWeeklySalary = 32
-    val timsMonthlySalary = timsWeeklySalary * 4
-    println("Tim's weekly salary is $timsWeeklySalary")
-    println("Monthly, that comes to $timsMonthlySalary")
+    val gr8 = Player("gr8", 4, 8)
+    val one2watch = Player("Ace", 2, 5, 1000)
+    gr8.show()
+    one2watch.show()
 
-    println()
+//    val lives = 0
+//
+//    var isGameOver = (lives < 1)
+//    println(isGameOver)
+//
+//    if(isGameOver){
+//        println("Game Over!")
+//    } else {
+//        println("You're still alive")
+//    }
 
-    val apples = 6
-    val oranges = 5
-    val fruit: Int = apples- oranges
-    println("$apples apples - $oranges oranges leaves $fruit piece(s) of fruit")
-    println("A quarter of the apple is ${apples/4}")
-    println()
+//    println("How old are you ? : ")
+//    val age = readLine()!!.toInt()
+//    println("age is $age")
+//
+//    val message: String
+//    message = when {
+//        age <18 -> {
+//            "You're too young to vote"
+//        }
+//        age == 100 -> {
+//            "Congratulations"
+//        }
+//        else -> {
+//            "You can vote"
+//        }
+//    }
 
-    //String concatenation and interpolation
-
-    println()
-    val weeks = 234
-    val years: Double = weeks/52.0
-    println("$weeks weeks is $years years")
-
-    println("My nams is $tim")
-
-    println("Cardi B gifted loads of \$\$\$\$ CASH \$\$\$\$ to his boyfriend and apparently it offended her fans")
+//    val message: String
+//    message = if (age <18 ){
+//        "You're too young to vote"
+//    } else if (age == 100) {
+//        "Congratulations"
+//    } else {
+//        "You can vote"
+//    }
 }
