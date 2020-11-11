@@ -36,7 +36,33 @@ fun main(args: Array<String>) {
     tim.show()
 
     val redPotion = Loot("Red Potion", LooType.POTION, 7.50)
-    tim.inventory.add(redPotion)
+    tim.getLoot(redPotion)
+    val chestArmor = Loot("+3 Chest Armor", LooType.ARMOR, 80.0)
+    tim.getLoot(chestArmor)
     tim.showInventory()
-    println(tim)
+
+    tim.getLoot(Loot("Ring of Protection +2", LooType.RING, 40.25))
+    tim.getLoot(Loot("Invisibility Potion", LooType.POTION, 35.95))
+    tim.showInventory()
+
+    if (tim.dropLoot(redPotion)){
+        tim.showInventory()
+    } else {
+        println("You don't have a ${redPotion.name}")
+    }
+
+    val bluePotion = Loot("Blue Potion", LooType.POTION,6.00)
+
+    if (tim.dropLoot(bluePotion)){
+        tim.showInventory()
+    }else{
+        println("You don't have a ${bluePotion.name}")
+    }
+
+    if (tim.dropLoot("Invisibility Potion")){
+        tim.showInventory()
+    }else {
+        println("You don't have an Invisibility Potion")
+    }
+
 }
