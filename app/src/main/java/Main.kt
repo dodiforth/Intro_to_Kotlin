@@ -13,4 +13,6 @@ fun main(args: Array<String>) {
     val dracula = VampireKing("Count Dracula")
     println(dracula)
     dracula.takeDamage(12)
+
+    //This is a comment to test Git update btw my iMac and Dell laptop
 }
