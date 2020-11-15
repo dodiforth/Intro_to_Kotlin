@@ -1,13 +1,17 @@
 open class Enemy(val name: String, var hitPoints: Int, var lives: Int) {
 
-    fun takeDamage(damage: Int){
+    open fun takeDamage(damage: Int){
         val remainHitPoints = hitPoints - damage
         if(remainHitPoints > 0){
             hitPoints = remainHitPoints
             println("$name took $damage points of damage, and has $hitPoints left")
         } else {
             lives -= 1
-            println("$name lost a life")
+            if(lives > 0){
+                println("$name lost a life")
+            } else {
+                println("No lives left $name is dead")
+            }
         }
     }
 
